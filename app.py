@@ -4,7 +4,7 @@ from server import get_pokemon
 app = Flask(__name__)
 app.secret_key = 'cfe8w7r56489[;´0-=6'
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     try:
         return render_template('index.html')
@@ -20,6 +20,9 @@ def search():
         if request.method == 'POST':
             pokemon = request.form['pokemon']
             result = get_pokemon(pokemon)
+
+            if 'Error' in result:
+                return redirect(url_for('error'))
 
             return render_template(
                 'search.html',
