@@ -22,7 +22,7 @@ def search():
             result = get_pokemon(pokemon)
 
             if 'Error' in result:
-                return redirect(url_for('error'))
+                return redirect(url_for('pokemon_not_found'))
 
             return render_template(
                 'search.html',
@@ -35,6 +35,13 @@ def search():
 @app.route('/error', methods=['GET', 'POST'])
 def error():
     return render_template('error.html')
+
+@app.route('/pokemon-not-found')
+def pokemon_not_found():
+    try:
+        return render_template('pokemon_not_found.html')
+    except:
+        return redirect(url_for('error'))
 
 if __name__ == '__main__':
     app.run(debug=True)

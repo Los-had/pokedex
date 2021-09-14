@@ -79,3 +79,5 @@ def get_pokemon(pokemon_name: str):
 
 if __name__ == '__main__':
     print(get_pokemon('ditto'))
+    print('\n\n\n\n')
+    print(get_pokemon('pikachu'))
