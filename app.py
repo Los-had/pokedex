@@ -1,5 +1,5 @@
 from flask import Flask, url_for, redirect, render_template, request
-from server import get_pokemon
+from pokedex import get_pokemon
 
 app = Flask(__name__)
 app.secret_key = 'cfe8w7r56489[;´0-=6'
