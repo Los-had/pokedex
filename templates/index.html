@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+<div class="form-outline">
+    <form action="{{ url_for('search') }}" method="post">
+      <input type="text" id="form1" class="form-control" name="pokemon">
+      <br> 
+      <input type="submit" value="Search Pokémon" class="btn btn-success">
+    </form>
+  </div>
 {% endblock %}

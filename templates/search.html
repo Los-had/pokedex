@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
+<div class="card" style="width: 25rem;">
+    <img src="{{ data['img'] }}" class="card-img-top" alt="{{ data['name'] }} picture">
+    <div class="card-body">
+      <h5 class="card-title">{{ data['name'] }}</h5>
+      <p class="card-text">
+          Name: {{ data['name'] }}, <br>
+          Weight: {{ data['weight'] }}, <br>
+          Height {{ data['height'] }}, <br>
+          Types: {{ data['types'] }}, <br>
+          Moves: {{ data['moves'] }}, <br>
+          Abilities: {{ data['abilities'] }}, <br>
+          pokédex id: {{ data['id'] }}
+      </p>
+      <a href="{{ url_for('index') }}" class="btn btn-success">Back to home</a>
+    </div>
+  </div>
 {% endblock %}
