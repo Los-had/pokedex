@@ -19,6 +19,7 @@ python app.py
 execute the app
 
 or you can host the server using repl.it
+
 [![Run on Repl.it](https://repl.it/badge/github/Los-had/pokedex)](https://repl.it/github/Los-had/pokedex)
 
 to stop the server(localhost) press <kbd>Ctrl</kbd><kbd>+</kbd><kbd>C</kbd>
